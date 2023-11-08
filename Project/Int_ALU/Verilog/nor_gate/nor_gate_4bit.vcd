@@ -1,0 +1,51 @@
+$date
+	Tue Oct 24 23:21:21 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module nor_gate_4bit_tb $end
+$var reg 1 ! clk $end
+$upscope $end
+$scope module nor_gate_4bit_tb $end
+$var reg 4 " x [3:0] $end
+$upscope $end
+$scope module nor_gate_4bit_tb $end
+$var reg 4 # y [3:0] $end
+$upscope $end
+$scope module nor_gate_4bit_tb $end
+$var wire 4 $ o [3:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111 $
+b0 #
+b0 "
+0!
+$end
+#5
+1!
+#10
+b0 $
+0!
+b1111 "
+#15
+1!
+#20
+0!
+b0 "
+b1111 #
+#25
+1!
+#30
+b1001 $
+0!
+b110 #
+#35
+1!
+#40
+0!
