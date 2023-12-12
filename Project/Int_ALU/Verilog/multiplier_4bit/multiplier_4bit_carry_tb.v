@@ -11,12 +11,12 @@ module multiplier_4bit_carry_tb;
         #10 A = 4'b0010; B = 4'b0001; carry_in = 1'b0;
         #10 A = 4'b0011; B = 4'b0010; carry_in = 1'b0;
         #10 A = 4'b0001; B = 4'b0111; carry_in = 1'b1;
-        #10 A = 4'b0011; B = 4'b0011; carry_in = 1'b0;
+        #10 A = 4'b1011; B = 4'b0011; carry_in = 1'b0;
         #10 $finish;  // End the simulation
     end
 
-    wire [7:0] PRODUCT;   // Product output
-    wire carry_out;      // Carry-out output
+    wire [3:0] PRODUCT;   // Product output
+    wire carry_out=0;  // Carry-out output
     multiplier_4bit_carry uut(
         .A(A),
         .B(B),
@@ -36,8 +36,7 @@ module multiplier_4bit_carry_tb;
     end
 
     initial  // Monitor values and print when they change
-        $monitor("At time %t, A(%b), B(%b), carry_in(%b) = PRODUCT(%h) with carry_out(%b)", 
+        $monitor("At time %t, A(%b), B(%b), carry_in(%b) = PRODUCT(%b) with carry_out(%b)", 
                 $time, A, B, carry_in, PRODUCT, carry_out);
 
 endmodule
-
